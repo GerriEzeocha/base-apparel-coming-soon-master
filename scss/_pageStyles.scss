@@ -1,0 +1,197 @@
+.logoSection {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 3rem;
+    grid-row: 1;
+    
+    @include breakpoints(laptop){
+        margin-left: 3rem;
+    }
+}
+
+.mobileHeroImage {
+    grid-row: 2;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+
+    @include breakpoints(laptop){
+        display: none;
+    }
+}
+
+.coming-soon {
+    grid-row: 3;
+    font-size: 3.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.88125rem;
+    color: $darkGrayishRed;
+    padding-top: 4rem;
+
+    @include breakpoints(tablet){
+        font-size: 4.1rem;
+    }
+
+    @include breakpoints(laptop){
+        grid-row: 2;
+        text-align: left;
+        margin-left: 5rem;
+    }
+}
+
+.top-text-styles {
+    margin-top: 0.625rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    @include breakpoints(tablet){
+
+    }
+}
+.colorText{
+    font-weight: 300;
+    color: $desaturatedRed;
+}
+
+.hello-msg {
+    color: $desaturatedRed;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto 2.875rem auto 2.875rem;
+    grid-row: 4;
+
+    @include breakpoints(tablet){
+        font-size: 2.3125rem;
+        margin: auto 2.875rem auto 2.875rem;
+    }
+
+    @include breakpoints(laptop){
+        grid-row: 3;
+        font-size: 1.125rem;
+        text-align: left;
+        line-height: 2rem;
+        margin-left: 5rem;
+    }
+}
+
+.email {
+    grid-row: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+
+    @include breakpoints(laptop){
+        grid-row: 4;
+        align-items: flex-start;
+        margin-left: 2.1rem;
+        margin-top: 1.125rem;
+        flex-wrap: wrap;
+    }
+
+
+    input[type=email]{
+        box-sizing: border-box;
+        outline: none;
+        width: 76%;
+        padding: 1rem;
+        border-radius: 1.875rem;
+        color: $desaturatedRed;
+        font-size: 0.8125rem;
+        font-family: 'Josefin Sans', sans-serif;
+        border: 1px solid lightgray;
+    }
+
+    input:not(:focus):invalid {
+        @include breakpoints(phablet){
+            background-image: url("/images/icon-error.svg");
+            background-repeat: no-repeat;
+            background-position: 78% 12px;
+            color: black;
+            border: 1px solid $softRed;
+        }
+        
+        @include breakpoints(tablet){
+            background-position: 85% 0.75rem;
+        }
+
+        @include breakpoints(laptop){
+            background-position: 79% 0.75rem;
+        }
+    }
+
+    input:not(:focus):invalid ~ .error-msg {
+
+        @include breakpoints(laptop){
+            display: block; 
+        }
+      }
+
+
+
+    .send-btn {
+        display: flex;
+        background: linear-gradient(135deg, $gradientB-1, $gradientB-2);
+        height: 3.1875rem;
+        width: 4.25rem;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: -4.125rem;
+        top: -0.125rem;
+        border-radius: 1.5rem;
+        cursor: pointer;
+
+        @include breakpoints(laptop){
+            width: 5.3125rem;
+            left: -5.25rem;
+        }
+    }
+
+    .send-btn:hover{
+        box-shadow: -0.3125rem 0.6875rem 1.125rem $desaturatedRed;
+        background: $gradientB-1;
+    }
+
+    .error-msg {
+        display: none;
+        color: $softRed;
+        font-size: 0.8125rem;
+        position: relative;
+
+        @include breakpoints(phablet){
+            left: -10rem;
+            top: -2rem;
+        }
+
+        @include breakpoints(tablet){
+            left: -44rem;
+            top: 3rem;
+        }
+
+        @include breakpoints(laptop){
+            left: -10rem;
+            top: -2rem;
+        }
+
+    }
+}
+
+.desktopHeroImage {
+    img {
+        width: 100%;
+    }
+}
+
+.attribution {
+    position: inherit;
+    font-size: 0.75rem;
+    color: lightgray;
+    margin-left: 3rem;
+    a{
+        text-decoration: none;
+        color: lightgray;
+    }
+}

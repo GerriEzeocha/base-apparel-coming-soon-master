@@ -1,0 +1,39 @@
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include breakpoints(phablet){
+       
+    }
+    @include breakpoints(tablet){
+
+    }
+    @include breakpoints(laptop){
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section1 {
+        display: grid;
+        grid-template-rows: 6.875rem 1fr 18.75rem 9.375rem 9.375rem ;
+
+        @include breakpoints(tablet){
+            grid-template-rows: 7.5rem 1fr 21.875rem 12.5rem 11.875rem ;
+        }
+        
+        @include breakpoints(laptop){
+            grid-template-rows: 7.5rem 18.75rem 9.375rem 11rem;
+            background: url("/images/bg-pattern-desktop.svg");
+        }
+    }
+    
+    .section2 {
+        @include breakpoints(phablet){
+            display: none;
+        }
+        
+        @include breakpoints(laptop){
+            display: grid;
+        }
+    }
+
+}
+

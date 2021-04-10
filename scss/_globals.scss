@@ -1,0 +1,14 @@
+html {
+    box-sizing: border-box;
+}
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(to right, $gradientA-1, $gradientA-2);
+}
+
